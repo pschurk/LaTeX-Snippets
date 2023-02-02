@@ -1,2 +1,2 @@
 # LaTeX-Snippets
-A collection of various snippets to write LaTeX more efficiently with vim.
+A collection of various snippets to write LaTeX more efficiently with vim and Ultisnips.

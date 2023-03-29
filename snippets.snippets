@@ -1,0 +1,12 @@
+snippet snip "snippet"
+snippet $1 " $2 " $3
+$4
+endsnippet $0
+endsnippet 
+
+snippet msnip " snippet only triggered in math mode"
+context "math()"
+snippet $1 " $2 " $3
+$4
+endsnippet $0
+endsnippet 

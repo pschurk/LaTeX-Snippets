@@ -96,6 +96,8 @@ snippet subBA "Standalone subfile of the BA thesis"
 \newtheorem{Def}[thm]{Definition}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{cor}[thm]{Corollary}
+\newtheorem{exe}[thm]{Exercise}
+\newtheorem{prop}[thm]{Proposition}
 \newtheorem*{rem}{Remark}
 \geometry{right=2cm, left=2.5cm, top=2cm}
 
@@ -124,7 +126,7 @@ snippet sub "Standalone subfile"
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{cor}[thm]{Corollary}
 \newtheorem{prop}[thm]{Proposition}
-\newtheorem*{exc}{Excersise}
+\newtheorem*{exe}{Exercise}
 \newtheorem*{rem}{Remark}
 \newtheorem*{example}{Example}
 \geometry{right=2cm, left=2.5cm, top=2cm}
@@ -318,10 +320,10 @@ $1
 \end{prop} $0
 endsnippet 
 
-snippet exc " Excersise " 
-\begin{exc}
+snippet exe " Exercise " 
+\begin{exe}
 $1
-\end{exc} $0
+\end{exe} $0
 endsnippet 
 
 snippet enum "enumerate environment"
@@ -395,7 +397,7 @@ endsnippet
 
 context "math()"
 snippet sum "Sum" A
-\sum_{ $1 = $2 }^{ $3 } $0
+\sum_{ $1 }^{ $2 } $0
 endsnippet
 
 context "math()"
@@ -405,22 +407,22 @@ endsnippet
 
 context "math()"
 snippet intab "Int a to b" A
-\int_a^b $1 \ d $0 
+\int_a^b $1  d $0 
 endsnippet
 
 context "math()"
 snippet intzo "Int 0 to 1" A
-\int_0^1 $1 \ d $0 
+\int_0^1 $1  d $0 
 endsnippet
 
 context "math()"
 snippet intzp "Int 0 to 2pi" A
-\int_0^{2\pi} $1 \ d $0 
+\int_0^{2\pi} $1  d $0 
 endsnippet
 
 context "math()"
 snippet int "Int " 
-\int_{ $1 }^{ $2 } $3 \ d $0  
+\int_{ $1 }^{ $2 } $3  d $0  
 endsnippet
 
 context "math()"
@@ -598,6 +600,11 @@ snippet leq "less equal" A
 \leq $0 
 endsnippet
 
+snippet	lessim "less equal with constant" A
+\lesssim $0
+endsnippet
+
+
 snippet geq "greater equal" A
 \geq $0 
 endsnippet
@@ -745,9 +752,29 @@ endsnippet
 
 context "math()"
 snippet exp "exponential function" A
-\exp( $1 ) $0
+\exp \left( $1 \right) $0
 endsnippet
 #\mathbb symbols
+
+snippet lpr " L ^p space " 
+L ^p \left( \mathbb{R} ^{ $1} \right) $0
+endsnippet 
+
+snippet l1r " L ^1 over R " 
+L ^1 \left( \mathbb{R} ^{ $1} \right) $0
+endsnippet 
+
+snippet l1 " L ^1 over R " 
+L ^1 $0
+endsnippet
+
+snippet lp " L ^ P space  " 
+L ^p $0
+endsnippet 
+
+snippet lpv  " L ^ variable " 
+L ^{ $1 } \left( \mathbb{R} ^{ $2} \right) $0
+endsnippet 
 
 snippet RR "R" A
 \mathbb{R} $0
